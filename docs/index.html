@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a1b20" />
+    <meta
+      name="description"
+      content="A private Loy Krathong forest story for two. Meet by the wishing tree, fold a krathong, and float it together."
+    />
+    <title>The Wishing Tree · Loy Krathong for two</title>
+    <link rel="icon" type="image/svg+xml" href="assets/mark.svg" />
+    <link rel="preload" as="image" href="assets/forest.webp" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="config.js"></script>
+    <script defer src="story.js"></script>
+    <script defer src="rooms.js"></script>
+    <script defer src="art.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="world" id="world" aria-hidden="true">
+      <div class="landscape"></div>
+      <div class="scene-art kiss"></div>
+      <div class="scene-art bed"></div>
+      <div class="shade"></div>
+      <div id="fireflies"></div>
+    </div>
+    <div class="shell">
+      <header>
+        <a class="brand" href="./" id="brand" aria-label="The Wishing Tree home"
+          ><img src="assets/mark.svg" alt="" /><span>The Wishing Tree</span></a
+        >
+        <nav class="utilities" aria-label="Story options">
+          <button id="sound" class="utility" aria-pressed="false">
+            <span data-icon="muted"></span><span class="sound-label">Sound off</span>
+          </button>
+          <span class="nav-rule"></span>
+          <button id="help" class="utility">
+            <span data-icon="book"></span><span>Story guide</span>
+          </button>
+        </nav>
+      </header>
+      <main id="main" tabindex="-1">
+        <section id="home" class="home">
+          <div class="home-copy">
+            <div class="eyebrow">
+              <span class="hairline"></span><span>Loy Krathong</span><i></i
+              ><span lang="th">ลอยกระทง</span>
+            </div>
+            <h1>Under the<br /><em>Wishing Tree</em></h1>
+            <div class="flourish" aria-hidden="true"><span></span>✧<span></span></div>
+            <p>
+              A moonlit forest for just the two of you. Fold a krathong, make a quiet wish, and let
+              it drift together.
+            </p>
+            <div class="actions">
+              <button class="primary" id="create">
+                <span data-icon="lotus"></span>Create a room</button
+              ><button class="secondary" id="join">
+                <span data-icon="key"></span>Join with a code
+              </button>
+            </div>
+            <button id="rehearse" class="text-button">
+              <span data-icon="play"></span>Explore the story solo
+            </button>
+          </div>
+        </section>
+        <section id="story" class="story" hidden aria-label="Shared story"></section>
+      </main>
+      <footer id="journey">
+        <div class="journal-label">
+          <span data-icon="sprig"></span>
+          <div>
+            <span class="smallcaps">Our evening</span><span class="journal-sub">Five chapters</span>
+          </div>
+        </div>
+        <nav id="chapters" aria-label="Preview the chapters"></nav>
+      </footer>
+    </div>
+    <dialog id="dialog" aria-labelledby="dialog-title">
+      <div class="dialog-inner">
+        <button class="close" id="close-dialog" aria-label="Close dialog">
+          <span data-icon="close"></span>
+        </button>
+        <div id="dialog-body"></div>
+      </div>
+    </dialog>
+    <div role="status" aria-live="polite" class="toast" id="toast"></div>
+    <noscript
+      >This story needs JavaScript. Enable it in your browser, then reopen the page.</noscript
+    >
+  </body>
+</html>
